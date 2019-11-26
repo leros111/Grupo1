@@ -94,6 +94,12 @@
     <Compile Include="Views\Extras\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Horario\AdministrarHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Horario\AdministrarHorario.Designer.cs">
+      <DependentUpon>AdministrarHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Menu\Menu_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Extras\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Horario\AdministrarHorario.resx">
+      <DependentUpon>AdministrarHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Menu\Menu_Admin.resx">
       <DependentUpon>Menu_Admin.cs</DependentUpon>

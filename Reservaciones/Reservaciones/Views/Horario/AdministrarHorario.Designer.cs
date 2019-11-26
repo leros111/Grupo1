@@ -34,7 +34,7 @@
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnBorrar = new System.Windows.Forms.ToolStripButton();
             this.btnCerrar = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtFiltral = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
@@ -87,15 +87,15 @@
             this.btnCerrar.Size = new System.Drawing.Size(59, 22);
             this.btnCerrar.Text = "Cerrar";
             // 
-            // label1
+            // txtFiltral
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.txtFiltral.AutoSize = true;
+            this.txtFiltral.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtFiltral.Location = new System.Drawing.Point(0, 25);
+            this.txtFiltral.Name = "txtFiltral";
+            this.txtFiltral.Size = new System.Drawing.Size(35, 13);
+            this.txtFiltral.TabIndex = 5;
+            this.txtFiltral.Text = "label1";
             // 
             // textBox1
             // 
@@ -121,7 +121,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtFiltral);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdministrarHorario";
@@ -141,7 +141,7 @@
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnBorrar;
         private System.Windows.Forms.ToolStripButton btnCerrar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtFiltral;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
