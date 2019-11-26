@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ACBD57D4-1F78-401C-99F9-9EF079952F84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Reservaciones</RootNamespace>
+    <AssemblyName>Reservaciones</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\CategoriaModel.cs" />
+    <Compile Include="Models\DetalleCategoriaModel.cs" />
+    <Compile Include="Models\Especificaciones.cs" />
+    <Compile Include="Models\HorarioModel.cs" />
+    <Compile Include="Models\RegistoUsuarioModel.cs" />
+    <Compile Include="Models\ReservadosModel.cs" />
+    <Compile Include="Models\SalonModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Conexion.cs" />
+    <Compile Include="Utils\Login.cs" />
+    <Compile Include="Views\Escritorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Escritorio.Designer.cs">
+      <DependentUpon>Escritorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Extras\Acerca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Extras\Acerca.Designer.cs">
+      <DependentUpon>Acerca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Extras\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Extras\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Menu\Menu_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Menu\Menu_Admin.Designer.cs">
+      <DependentUpon>Menu_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Menu\Menu_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Menu\Menu_User.Designer.cs">
+      <DependentUpon>Menu_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Salon\AdministrarCaracteristicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Salon\AdministrarCaracteristicas.Designer.cs">
+      <DependentUpon>AdministrarCaracteristicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Salon\AdministrarSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Salon\AdministrarSalon.Designer.cs">
+      <DependentUpon>AdministrarSalon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Salon\Nuevo_Editar_Caracteristicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Salon\Nuevo_Editar_Caracteristicas.Designer.cs">
+      <DependentUpon>Nuevo_Editar_Caracteristicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Salon\Nuevo_Editar_Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Salon\Nuevo_Editar_Categoria.Designer.cs">
+      <DependentUpon>Nuevo_Editar_Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Salon\Nuevo_Editar_Salon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Salon\Nuevo_Editar_Salon.Designer.cs">
+      <DependentUpon>Nuevo_Editar_Salon.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\Escritorio.resx">
+      <DependentUpon>Escritorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Extras\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Menu\Menu_Admin.resx">
+      <DependentUpon>Menu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Menu\Menu_User.resx">
+      <DependentUpon>Menu_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Salon\AdministrarCaracteristicas.resx">
+      <DependentUpon>AdministrarCaracteristicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Salon\AdministrarSalon.resx">
+      <DependentUpon>AdministrarSalon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Salon\Nuevo_Editar_Caracteristicas.resx">
+      <DependentUpon>Nuevo_Editar_Caracteristicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Salon\Nuevo_Editar_Categoria.resx">
+      <DependentUpon>Nuevo_Editar_Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Salon\Nuevo_Editar_Salon.resx">
+      <DependentUpon>Nuevo_Editar_Salon.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\logo_login.jpg" />
+    <Content Include="Icons\logo_splash.png" />
+    <Content Include="Icons\usuario.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
